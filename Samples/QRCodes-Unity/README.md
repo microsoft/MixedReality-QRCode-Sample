@@ -5,15 +5,18 @@ languages:
 products:
 - windows
 - mixed-reality
+- hololens
 ---
 
 # QR code tracking in Unity 
+
+![License](https://img.shields.io/badge/license-MIT-green.svg)
 
 This sample shows you how to use QR Codes in Unity projects using a HoloLens or Windows Mixed Reality immersive headset. Covered features include displaying a holographic square over QR codes and associated data such as:
 * GUID
 * Physical size
 * Timestamp
-* Decoded data.
+* Decoded data
 
 ## Contents
 
@@ -34,18 +37,36 @@ This sample shows you how to use QR Codes in Unity projects using a HoloLens or 
 * Download the [QR code NuGet package](https://www.nuget.org/Packages/Microsoft.MixedReality.QR)
 * **For Windows Mixed Reality headsets**: QR code tracking on desktop PCs is only supported on Windows 10 Version 2004 and higher.
 
+<!-- Unity 2020 with XR plugin -->
+
 ## Setup
 
 1. Clone or download this sample repository.
 2. Go to **Assets > Scenes** and open **QRCodesSample.unity**
 
+<!-- Open SampleQRCodes folder in Unity Hub and load the default scene -->
+
 ## Running the sample
 
 1. Hit **Play** in the Unity editor
+2. In the HoloLens connected to Unity or with Remoting, a QR pops up in the scene in front of the user
+3. When the QR code is read, a rectangle object is placed at the QR code coordinates 
 
 ## Key concepts
 
-You can find the [full article on QR code tracking](https://docs.microsoft.com/windows/mixed-reality/develop/platform-capabilities-and-apis/qr-code-tracking) on Microsoft Docs. The following key concepts are recommended best practices when using QR code detection in your Mixed Reality projects.
+You can find the [full article on QR code tracking](https://docs.microsoft.com/windows/mixed-reality/develop/platform-capabilities-and-apis/qr-code-tracking) on Microsoft Docs. 
+
+QRCode.cs - Object for each of the QR codes. Reads the QR code, class that represents the QR code. This script is attached to the QR code object and properties are filled on Start().
+
+QRCodesManager.cs - Main class that handles the QR SDK. Loads the plugin, adding the event listeners, and waiting for the events to fire and uses the callback functions. Also has start and stop functions for tracking QR codes. Maintains a local list of QR codes. Enables Webcam functionality. App manifest for the build, UWP enable webcam capability when you build the app for Windows. All other setup is in the Start method.
+
+QRCodesSetup.cs - Kicks off the QR code manager tracking functionality.
+
+QRCodesVisualizer.cs - Does all the visualizing of the QR code in the scene, instantiates all QR codes in the local list and spawns them in the scene.
+
+SpatialGraphCoordinateSystem.cs - Main script for transforming real-world QR code coordinates into Unity coordinate system and places the virtual QR code in the scene at that location. Must be attached to the QR code object.
+
+## Best practices 
 
 * **Quiet zones**: To be read correctly, QR codes require a margin around all sides of the code. This margin must not contain any printed content and should be four modules (a single black square in the code) wide. 
     * The [QR spec](https://www.qrcode.com/howto/code.html) contains more information about quiet zones.
