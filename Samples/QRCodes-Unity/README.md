@@ -65,7 +65,7 @@ You can find the [full article on QR code tracking](https://docs.microsoft.com/w
 * [World locking and spatial anchors](https://docs.microsoft.com/windows/mixed-reality/design/spatial-anchors-in-unity)
 * [HoloLens environment considerations](https://docs.microsoft.com/hololens/hololens-environment-considerations)
 
-# Contributing
+## Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
 Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
