@@ -12,6 +12,10 @@ products:
 
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 
+Supported Unity versions | XR configuration
+:-----------------: | :----------------:
+Unity 2020 and later | Windows XR Plugin
+
 This sample shows you how to use QR Codes in Unity projects using a HoloLens or Windows Mixed Reality immersive headset. Covered features include displaying a holographic square over QR codes and associated data such as:
 * GUID
 * Physical size
@@ -37,14 +41,10 @@ This sample shows you how to use QR Codes in Unity projects using a HoloLens or 
 * Download the [QR code NuGet package](https://www.nuget.org/Packages/Microsoft.MixedReality.QR)
 * **For Windows Mixed Reality headsets**: QR code tracking on desktop PCs is only supported on Windows 10 Version 2004 and higher.
 
-<!-- Unity 2020 with XR plugin -->
-
 ## Setup
 
 1. Clone or download this sample repository.
-2. Go to **Assets > Scenes** and open **QRCodesSample.unity**
-
-<!-- Open SampleQRCodes folder in Unity Hub and load the default scene -->
+2. Open the **QRCodes** folder in Unity Hub and launch the project
 
 ## Running the sample
 
@@ -54,17 +54,28 @@ This sample shows you how to use QR Codes in Unity projects using a HoloLens or 
 
 ## Key concepts
 
-You can find the [full article on QR code tracking](https://docs.microsoft.com/windows/mixed-reality/develop/platform-capabilities-and-apis/qr-code-tracking) on Microsoft Docs. 
+You can find the [full article on QR code tracking](https://docs.microsoft.com/windows/mixed-reality/develop/platform-capabilities-and-apis/qr-code-tracking) on Microsoft Docs. The following is a breakdown of each C# script in the sample app:
 
-QRCode.cs - Object for each of the QR codes. Reads the QR code, class that represents the QR code. This script is attached to the QR code object and properties are filled on Start().
+`QRCode.cs` - This script is attached to the QR code object and populates the text displayed in the scene with the QR code properties on `Start`.
 
-QRCodesManager.cs - Main class that handles the QR SDK. Loads the plugin, adding the event listeners, and waiting for the events to fire and uses the callback functions. Also has start and stop functions for tracking QR codes. Maintains a local list of QR codes. Enables Webcam functionality. App manifest for the build, UWP enable webcam capability when you build the app for Windows. All other setup is in the Start method.
+`QRCodesManager.cs` - This is the main class that handles the QR SDK, including: 
+* Loading the plugin
+* Checking if tracking is supported
+* Requesting access to the webcame
+* Adding event listeners for new, updated, and removed QR codes
+* Handling events through callback functions
+* Starting and stopping QR code tracking
+* Maintaining a local list of QR codes
 
-QRCodesSetup.cs - Kicks off the QR code manager tracking functionality.
+`QRCodesSetup.cs` - Kicks off the QR code manager tracking functionality in `QRCodesManager`.
 
-QRCodesVisualizer.cs - Does all the visualizing of the QR code in the scene, instantiates all QR codes in the local list and spawns them in the scene.
+`QRCodesVisualizer.cs` - Handles all QR code visualizing in the scene and instantiates all QR codes in the local list kept in `QRCodesManager`.
 
-SpatialGraphCoordinateSystem.cs - Main script for transforming real-world QR code coordinates into Unity coordinate system and places the virtual QR code in the scene at that location. Must be attached to the QR code object.
+`SpatialGraphCoordinateSystem.cs` - This script is attached to the QR code object and transforms real-world QR code coordinates into the Unity coordinate system. The script also places the virtual QR code in the scene at the same location as the real-world QR code.
+
+## API Reference
+
+You can find the [complete API reference](https://docs.microsoft.com/windows/mixed-reality/develop/platform-capabilities-and-apis/qr-code-tracking#qr-api-reference) for Microsoft.MixedReality.QR NuGet package on Microsoft Docs.
 
 ## Best practices 
 
@@ -99,4 +110,3 @@ provided by the bot. You will only need to do this once across all repos using o
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
 For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
 contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
-
