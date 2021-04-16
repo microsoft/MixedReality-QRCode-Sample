@@ -1,5 +1,6 @@
 ---
 page_type: sample
+name: QR code tracking in Unity
 languages:
 - csharp
 products:
@@ -11,9 +12,8 @@ products:
 
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 
-Supported Unity versions | XR configuration
-:-----------------: | :----------------:
-Unity 2020 and later | Windows XR Plugin
+> [!IMPORTANT]
+> This sample has been validated up to Unity 2020 + Windows XR Plugin.
 
 This sample shows you how to use QR Codes in Unity projects using a HoloLens or Windows Mixed Reality immersive headset. Covered features include displaying a holographic square over QR codes and associated data such as:
 * GUID
