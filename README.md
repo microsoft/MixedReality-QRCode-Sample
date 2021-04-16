@@ -3,8 +3,7 @@ page_type: sample
 languages:
 - csharp
 products:
-- windows
-- mixed-reality
+- windows-mixed-reality
 - hololens
 ---
 
