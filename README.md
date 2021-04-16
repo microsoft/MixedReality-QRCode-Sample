@@ -1,6 +1,7 @@
 ---
 page_type: sample
 name: QR code tracking in Unity
+description: This sample shows you how to use QR Codes in Unity projects using a HoloLens or Windows Mixed Reality immersive headset.
 languages:
 - csharp
 products:
