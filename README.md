@@ -13,8 +13,9 @@ products:
 
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 
-> [!IMPORTANT]
-> This sample has been validated up to Unity 2020 + Windows XR Plugin.
+Supported Unity versions | Built with XR configuration
+:-----------------: | :----------------: |
+Unity 2020 or higher | Windows XR Plugin |
 
 This sample shows you how to use QR Codes in Unity projects using a HoloLens or Windows Mixed Reality immersive headset. Covered features include displaying a holographic square over QR codes and associated data such as:
 * GUID
