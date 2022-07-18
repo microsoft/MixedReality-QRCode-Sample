@@ -39,6 +39,7 @@ This sample shows you how to use QR Codes in Unity projects using a HoloLens or 
 
 * Install the [latest Mixed Reality tools](https://docs.microsoft.com/windows/mixed-reality/develop/install-the-tools?tabs=unity)
 * Install the [recommended Unity version](https://docs.microsoft.com/windows/mixed-reality/develop/install-the-tools?tabs=unity#install-your-engine-of-choice) 
+* Install the [Mixed Reality Feature tool for Unity](https://docs.microsoft.com/en-us/windows/mixed-reality/develop/unity/welcome-to-mr-feature-tool)
 * Download the [QR code NuGet package](https://www.nuget.org/Packages/Microsoft.MixedReality.QR)
 * **For Windows Mixed Reality headsets**: QR code tracking on desktop PCs is only supported on Windows 10 Version 2004 and higher.
 
@@ -46,6 +47,7 @@ This sample shows you how to use QR Codes in Unity projects using a HoloLens or 
 
 1. Clone or download this sample repository.
 2. Open the **Sample** folder in Unity Hub and launch the project
+3. Using Mixed Reality Feature tool, add **Mixed Reality Toolkit Foundation** and **Mixed Reality Toolkit Standard Assets** features to project
 
 ## Running the sample
 
