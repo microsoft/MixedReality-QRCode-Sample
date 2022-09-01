@@ -625,8 +625,8 @@ PlayerSettings:
   metroCertificatePassword: 
   metroCertificateSubject: Microsoft
   metroCertificateIssuer: Microsoft
-  metroCertificateNotAfter: 00fe97b5dedbd901
-  metroApplicationDescription: Template_3D
+  metroCertificateNotAfter: 00e61c522eddd901
+  metroApplicationDescription: QR codes detected in Mixed reality space displayed.
   wsaImages: {}
   metroTileShortName: SampleQRCodes
   metroTileShowName: 0
@@ -677,10 +677,10 @@ PlayerSettings:
       PointOfService: False
       RecordedCallsFolder: False
       Contacts: False
+      Proximity: False
       InternetClient: True
       CodeGeneration: False
       BackgroundMediaPlayback: False
-      Proximity: False
   metroTargetDeviceFamilies:
     Desktop: False
     Holographic: False
