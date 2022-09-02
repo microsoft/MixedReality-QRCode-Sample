@@ -1,16 +1,11 @@
-﻿using System.Collections;
+﻿// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
 
-using System.Collections.Generic;
 using UnityEngine;
 
-#if WINDOWS_UWP
-
-using Windows.Perception.Spatial;
-
-#endif
 namespace QRTracking
 {
-    [RequireComponent(typeof(QRTracking.SpatialGraphCoordinateSystem))]
+    [RequireComponent(typeof(SpatialGraphCoordinateSystem))]
     public class QRCode : MonoBehaviour
     {
         public Microsoft.MixedReality.QR.QRCode qrCode;
@@ -57,7 +52,7 @@ namespace QRTracking
             QRNodeID.text = "NodeId:" + qrCode.SpatialGraphNodeId.ToString();
             QRText.text = CodeText;
 
-            if (System.Uri.TryCreate(CodeText, System.UriKind.Absolute,out uriResult))
+            if (System.Uri.TryCreate(CodeText, System.UriKind.Absolute, out uriResult))
             {
                 validURI = true;
                 QRText.color = Color.blue;
@@ -78,14 +73,14 @@ namespace QRTracking
                 QRSize.text = "Size:" + qrCode.PhysicalSideLength.ToString("F04") + "m";
 
                 QRTimeStamp.text = "Time:" + qrCode.LastDetectedTime.ToString("MM/dd/yyyy HH:mm:ss.fff");
-                QRTimeStamp.color = QRTimeStamp.color==Color.yellow? Color.white: Color.yellow;
+                QRTimeStamp.color = QRTimeStamp.color == Color.yellow ? Color.white : Color.yellow;
                 PhysicalSize = qrCode.PhysicalSideLength;
                 Debug.Log("Id= " + qrCode.Id + "NodeId= " + qrCode.SpatialGraphNodeId + " PhysicalSize = " + PhysicalSize + " TimeStamp = " + qrCode.SystemRelativeLastDetectedTime.Ticks + " Time = " + qrCode.LastDetectedTime.ToString("MM/dd/yyyy HH:mm:ss.fff"));
 
                 qrCodeCube.transform.localPosition = new Vector3(PhysicalSize / 2.0f, PhysicalSize / 2.0f, 0.0f);
                 qrCodeCube.transform.localScale = new Vector3(PhysicalSize, PhysicalSize, 0.005f);
                 lastTimeStamp = qrCode.SystemRelativeLastDetectedTime.Ticks;
-                QRInfo.transform.localScale = new Vector3(PhysicalSize/0.2f, PhysicalSize / 0.2f, PhysicalSize / 0.2f);
+                QRInfo.transform.localScale = new Vector3(PhysicalSize / 0.2f, PhysicalSize / 0.2f, PhysicalSize / 0.2f);
             }
         }
 
@@ -114,7 +109,7 @@ namespace QRTracking
             {
                 launch = true;
             }
-// eventData.Use(); // Mark the event as used, so it doesn't fall through to other handlers.
+            // eventData.Use(); // Mark the event as used, so it doesn't fall through to other handlers.
         }
     }
 }

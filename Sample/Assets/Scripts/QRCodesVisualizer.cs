@@ -1,17 +1,16 @@
-﻿using System.Collections;
+﻿// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
 
 using System.Collections.Generic;
-
 using UnityEngine;
 
-using Microsoft.MixedReality.QR;
 namespace QRTracking
 {
     public class QRCodesVisualizer : MonoBehaviour
     {
         public GameObject qrCodePrefab;
 
-        private System.Collections.Generic.SortedDictionary<System.Guid, GameObject> qrCodesObjectsList;
+        private SortedDictionary<System.Guid, GameObject> qrCodesObjectsList;
         private bool clearExisting = false;
 
         struct ActionData
@@ -32,11 +31,7 @@ namespace QRTracking
             }
         }
 
-        private System.Collections.Generic.Queue<ActionData> pendingActions = new Queue<ActionData>();
-        void Awake()
-        {
-
-        }
+        private Queue<ActionData> pendingActions = new Queue<ActionData>();
 
         // Use this for initialization
         void Start()
@@ -143,5 +138,4 @@ namespace QRTracking
             HandleEvents();
         }
     }
-
 }

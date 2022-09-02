@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections;
-
-using System.Collections.Generic;
-
-using UnityEngine;
+﻿// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
 
 using Microsoft.MixedReality.QR;
+using System;
+using System.Collections.Generic;
+using UnityEngine;
 
 namespace QRTracking
 {
@@ -118,7 +117,7 @@ namespace QRTracking
                     IsTrackerRunning = true;
                     QRCodesTrackingStateChanged?.Invoke(this, true);
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     Debug.Log("QRCodesManager starting QRCodeWatcher Exception:" + ex.ToString());
                 }
@@ -219,11 +218,10 @@ namespace QRTracking
                     SetupQRTracking();
                 }
                 else
-                {  
+                {
                     Debug.Log("Capability access status : " + accessStatus);
                 }
             }
         }
     }
-
 }
