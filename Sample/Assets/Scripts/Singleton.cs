@@ -1,4 +1,8 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+
 using UnityEngine;
+
 namespace QRTracking
 {
     /// <summary>
@@ -51,12 +55,10 @@ namespace QRTracking
             }
         }
 
-
         private void OnApplicationQuit()
         {
             m_ShuttingDown = true;
         }
-
 
         private void OnDestroy()
         {
