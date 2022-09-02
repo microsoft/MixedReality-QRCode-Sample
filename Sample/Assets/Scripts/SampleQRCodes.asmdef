@@ -1,0 +1,17 @@
+{
+    "name": "SampleQRCodes",
+    "rootNamespace": "",
+    "references": [
+        "Microsoft.MixedReality.Toolkit",
+        "Unity.XR.WindowsMixedReality"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

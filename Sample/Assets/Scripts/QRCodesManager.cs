@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace QRTracking
+namespace SampleQRCodes
 {
     public static class QRCodeEventArgs
     {
