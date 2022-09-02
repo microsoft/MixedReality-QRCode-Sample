@@ -1,12 +1,13 @@
 ﻿// Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
 
+using Microsoft.MixedReality.Toolkit.Input;
 using UnityEngine;
 
 namespace QRTracking
 {
     [RequireComponent(typeof(SpatialGraphCoordinateSystem))]
-    public class QRCode : MonoBehaviour
+    public class QRCode : MonoBehaviour, IMixedRealityPointerHandler
     {
         public Microsoft.MixedReality.QR.QRCode qrCode;
         private GameObject qrCodeCube;
@@ -103,7 +104,13 @@ namespace QRTracking
 #endif
         }
 
-        public void OnInputClicked()
+        void IMixedRealityPointerHandler.OnPointerDown(MixedRealityPointerEventData eventData) { }
+
+        void IMixedRealityPointerHandler.OnPointerDragged(MixedRealityPointerEventData eventData) { }
+
+        void IMixedRealityPointerHandler.OnPointerUp(MixedRealityPointerEventData eventData) { }
+
+        void IMixedRealityPointerHandler.OnPointerClicked(MixedRealityPointerEventData eventData)
         {
             if (validURI)
             {
