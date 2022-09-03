@@ -12,6 +12,12 @@
     "precompiledReferences": [],
     "autoReferenced": true,
     "defineConstraints": [],
-    "versionDefines": [],
+    "versionDefines": [
+        {
+            "name": "com.unity.xr.windowsmr",
+            "expression": "1.0.0",
+            "define": "UNITY_XR_WINDOWSMR"
+        }
+    ],
     "noEngineReferences": false
 }

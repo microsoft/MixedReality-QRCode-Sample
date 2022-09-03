@@ -8,13 +8,13 @@ namespace SampleQRCodes.WindowsXR
     internal class SpatialGraphNode
     {
         public System.Guid Id { get; private set; }
-#if WINDOWS_UWP && XR_PLUGIN_WINDOWSMR
+#if WINDOWS_UWP && UNITY_XR_WINDOWSMR
         private Windows.Perception.Spatial.SpatialCoordinateSystem CoordinateSystem = null;
 #endif
 
         public static SpatialGraphNode FromStaticNodeId(System.Guid id)
         {
-#if WINDOWS_UWP && XR_PLUGIN_WINDOWSMR
+#if WINDOWS_UWP && UNITY_XR_WINDOWSMR
             var coordinateSystem = Windows.Perception.Spatial.Preview.SpatialGraphInteropPreview.CreateCoordinateSystemForNode(id);
             return coordinateSystem == null ? null :
                 new SpatialGraphNode()
@@ -32,7 +32,7 @@ namespace SampleQRCodes.WindowsXR
         {
             pose = Pose.identity;
 
-#if WINDOWS_UWP && XR_PLUGIN_WINDOWSMR
+#if WINDOWS_UWP && UNITY_XR_WINDOWSMR
             Quaternion rotation = Quaternion.identity;
             Vector3 translation = new Vector3(0.0f, 0.0f, 0.0f);
 
