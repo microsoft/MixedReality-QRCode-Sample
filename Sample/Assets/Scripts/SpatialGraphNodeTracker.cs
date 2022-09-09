@@ -10,7 +10,7 @@ using Microsoft.MixedReality.OpenXR;
 using SpatialGraphNode = Microsoft.MixedReality.SampleQRCodes.WindowsXR.SpatialGraphNode;
 #endif
 
-namespace SampleQRCodes
+namespace Microsoft.MixedReality.SampleQRCodes
 {
     internal class SpatialGraphNodeTracker : MonoBehaviour
     {
