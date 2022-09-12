@@ -77,6 +77,6 @@ crashlytics-build.properties
 
 # Sample specific
 
-/[Aa]pp/
+/[Aa]pp*/
 /[Aa]ssets/Packages/
 /UWP*/

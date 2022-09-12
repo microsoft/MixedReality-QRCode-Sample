@@ -3,7 +3,7 @@
 
 using UnityEngine;
 
-namespace QRTracking
+namespace SampleQRCodes
 {
     public class QRCodesSetup : MonoBehaviour
     {

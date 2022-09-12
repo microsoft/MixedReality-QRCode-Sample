@@ -3,7 +3,7 @@
 
 using UnityEngine;
 
-namespace QRTracking
+namespace SampleQRCodes
 {
     /// <summary>
     /// Inherit from this base class to create a singleton.
