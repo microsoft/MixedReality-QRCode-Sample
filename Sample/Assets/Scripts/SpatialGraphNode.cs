@@ -3,7 +3,7 @@
 
 using UnityEngine;
 
-namespace SampleQRCodes.WindowsXR
+namespace Microsoft.MixedReality.SampleQRCodes.WindowsXR
 {
     internal class SpatialGraphNode
     {
@@ -68,11 +68,7 @@ namespace SampleQRCodes.WindowsXR
                 pose = new Pose(translation, rotation);
                 return true;
             }
-            else
-            {
-                // Debug.Log("Id= " + id + " Unable to locate qrcode" );
-            }
-#endif // WINDOWS_UWP
+#endif
             return false;
         }
     }
