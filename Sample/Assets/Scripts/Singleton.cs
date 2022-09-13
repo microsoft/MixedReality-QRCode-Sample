@@ -3,7 +3,7 @@
 
 using UnityEngine;
 
-namespace SampleQRCodes
+namespace Microsoft.MixedReality.SampleQRCodes
 {
     /// <summary>
     /// Inherit from this base class to create a singleton.

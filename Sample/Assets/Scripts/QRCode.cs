@@ -4,7 +4,7 @@
 using Microsoft.MixedReality.Toolkit.Input;
 using UnityEngine;
 
-namespace SampleQRCodes
+namespace Microsoft.MixedReality.SampleQRCodes
 {
     [RequireComponent(typeof(SpatialGraphNodeTracker))]
     public class QRCode : MonoBehaviour, IMixedRealityPointerHandler
