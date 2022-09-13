@@ -3,9 +3,10 @@
 
 using UnityEngine;
 using Microsoft.MixedReality.Toolkit.Utilities;
-using SpatialGraphNode = SampleQRCodes.WindowsXR.SpatialGraphNode;
 
-namespace SampleQRCodes
+using SpatialGraphNode = Microsoft.MixedReality.SampleQRCodes.WindowsXR.SpatialGraphNode;
+
+namespace Microsoft.MixedReality.SampleQRCodes
 {
     internal class SpatialGraphNodeTracker : MonoBehaviour
     {

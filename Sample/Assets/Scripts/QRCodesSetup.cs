@@ -3,7 +3,7 @@
 
 using UnityEngine;
 
-namespace SampleQRCodes
+namespace Microsoft.MixedReality.SampleQRCodes
 {
     public class QRCodesSetup : MonoBehaviour
     {

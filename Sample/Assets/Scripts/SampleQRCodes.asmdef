@@ -1,5 +1,5 @@
 {
-    "name": "SampleQRCodes",
+    "name": "Microsoft.MixedReality.SampleQRCodes",
     "rootNamespace": "",
     "references": [
         "Microsoft.MixedReality.Toolkit",

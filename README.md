@@ -72,7 +72,19 @@ You can find the [full article on QR code tracking](https://docs.microsoft.com/w
 
 `QRCodesVisualizer.cs` - Handles all QR code visualizing in the scene and instantiates all QR codes in the local list kept in `QRCodesManager`.
 
-`SpatialGraphCoordinateSystem.cs` - This script is attached to the QR code object and transforms real-world QR code coordinates into the Unity coordinate system. The script also places the virtual QR code in the scene at the same location as the real-world QR code.
+`SpatialGraphNodeTracker.cs` - This script is attached to the QR code object and transforms real-world QR code coordinates into the Unity coordinate system. The script also places the virtual QR code in the scene at the same location as the real-world QR code.
+
+`SpatialGraphNode.cs` - This script is abstracting the tracking of a spatial graph static node, which represents the tracking information of QR code in a GUID id.
+
+## OpenXR sample
+
+Note that the ["main" branch](https://github.com/microsoft/MixedReality-QRCode-Sample/tree/main) of this sample is working with Unity's "Windows XR Plugin" which works with the WinRT APIs in in Unity 2019 or 2020 LTS versions.
+
+After upgrading to Unity 2020 or Unity 2021, You can also [use "OpenXR plugin" for HoloLens 2 developement](https://docs.microsoft.com/windows/mixed-reality/develop/unity/mixed-reality-openxr-plugin).  With OpenXR plugin, the app can use the built-in support for [SpatialGraphNode](https://docs.microsoft.com/dotnet/api/microsoft.mixedreality.openxr.spatialgraphnode), and the QR code tracking will work mostly the same way as above.
+
+To view the OpenXR version of the QRCode tracking on HoloLens 2, please checkout the "openxr" branch of this sample repro,  https://github.com/microsoft/MixedReality-QRCode-Sample/tree/OpenXR.  
+You can also inspect how to make modifications to existing QRCode Unity project to support OpenXR from this pull request: https://github.com/microsoft/MixedReality-QRCode-Sample/pull/18
+
 
 ## API Reference
 
